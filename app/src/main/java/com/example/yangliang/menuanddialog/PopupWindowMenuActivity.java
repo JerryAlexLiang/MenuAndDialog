@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -96,6 +97,9 @@ public class PopupWindowMenuActivity extends BaseActivity implements View.OnClic
         //设置菜单显示在按钮的下面
 //        popupWindow.showAsDropDown(findViewById(R.id.btn_enter_more), 0, 0);
         popupWindow.showAsDropDown(btnEnterMore, 0, 0);
+        //扩展：使用popupWindow.showAtLocation(View parent,int gravity,int x,int y)方法，
+        // 根据指定手机屏幕的x坐标与y坐标，控制菜单显示在屏幕中心的位置
+//        popupWindow.showAtLocation(view, Gravity.CENTER_HORIZONTAL,0,50);
         //设置点击其他地方消失
         popupWindow_view.setOnTouchListener(new View.OnTouchListener() {
             @Override
