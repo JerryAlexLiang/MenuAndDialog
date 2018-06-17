@@ -1,13 +1,51 @@
 package com.example.yangliang.menuanddialog;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.OnClick;
+
+public class MainActivity extends BaseActivity {
+
+    @BindView(R.id.btn_popup_menu)
+    Button btnMenu;
+
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_main);
+//    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initView() {
+        //改变状态栏颜色
+//        setWindowColor(MainActivity.this, Color.RED);
+        //改变状态栏为透明色
+        setTranslucent(MainActivity.this);
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+
+    @OnClick(R.id.btn_popup_menu)
+    public void onViewClicked(View view) {
+        Intent intent = new Intent();
+        switch (view.getId()) {
+            case R.id.btn_popup_menu:
+                intent.setClass(MainActivity.this, PopupWindowMenuActivity.class);
+                break;
+        }
+        startActivity(intent);
     }
 }

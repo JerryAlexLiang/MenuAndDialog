@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:orientation="vertical">
+
+    <!--菜单发起群聊按钮-->
+    <Button
+        android:id="@+id/menu_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="#e0000000"
+        android:drawableLeft="@drawable/icon_group"
+        android:drawablePadding="10dip"
+        android:drawableStart="@drawable/icon_group"
+        android:paddingEnd="58dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="58dp"
+        android:paddingStart="20dp"
+        android:text="@string/text_group"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+    <!--菜单添加好友按钮-->
+    <Button
+        android:id="@+id/menu_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="#e0000000"
+        android:drawableLeft="@drawable/icon_add"
+        android:drawablePadding="10dip"
+        android:drawableStart="@drawable/icon_add"
+        android:paddingEnd="58dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="58dp"
+        android:paddingStart="20dp"
+        android:text="@string/text_add"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+    <!--菜单扫一扫按钮-->
+    <Button
+        android:id="@+id/menu_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="#e0000000"
+        android:drawableLeft="@drawable/icon_scan"
+        android:drawablePadding="10dip"
+        android:drawableStart="@drawable/icon_scan"
+        android:paddingEnd="76dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="76dp"
+        android:paddingStart="20dp"
+        android:text="@string/text_sweep"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+    <!--菜单收付款按钮-->
+    <Button
+        android:id="@+id/menu_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="#e0000000"
+        android:drawableLeft="@drawable/icon_card"
+        android:drawablePadding="10dip"
+        android:drawableStart="@drawable/icon_card"
+        android:paddingEnd="76dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="76dp"
+        android:paddingStart="20dp"
+        android:text="@string/text_collect"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+    <!--菜单帮助与反馈按钮-->
+    <Button
+        android:id="@+id/menu_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="#e0000000"
+        android:drawableLeft="@drawable/icon_help"
+        android:drawablePadding="10dip"
+        android:drawableStart="@drawable/icon_help"
+        android:paddingEnd="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="40dp"
+        android:paddingStart="20dp"
+        android:text="@string/text_help"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+</LinearLayout>
