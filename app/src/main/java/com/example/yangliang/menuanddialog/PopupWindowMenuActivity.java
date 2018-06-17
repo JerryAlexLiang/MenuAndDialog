@@ -44,8 +44,6 @@ public class PopupWindowMenuActivity extends BaseActivity implements View.OnClic
 //        setContentView(R.layout.activity_popup_window_menu);
 //    }
 
-    //S
-
     /**
      * 启动该活动
      * String data1, String data2
