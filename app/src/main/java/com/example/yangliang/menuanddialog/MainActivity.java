@@ -40,12 +40,14 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.btn_popup_menu)
     public void onViewClicked(View view) {
-        Intent intent = new Intent();
+//        Intent intent = new Intent();
         switch (view.getId()) {
             case R.id.btn_popup_menu:
-                intent.setClass(MainActivity.this, PopupWindowMenuActivity.class);
+//                intent.setClass(MainActivity.this, PopupWindowMenuActivity.class);
+                //启动PopupWindowMenuActivity
+                PopupWindowMenuActivity.actionStart(MainActivity.this);
                 break;
         }
-        startActivity(intent);
+//        startActivity(intent);
     }
 }

@@ -1,6 +1,8 @@
 package com.example.yangliang.menuanddialog;
 
 import android.app.ActionBar;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.MotionEvent;
 import android.view.View;
@@ -40,6 +42,20 @@ public class PopupWindowMenuActivity extends BaseActivity implements View.OnClic
 //        super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_popup_window_menu);
 //    }
+
+    //S
+
+    /**
+     * 启动该活动
+     * String data1, String data2
+     */
+    public static void actionStart(Context context){
+        Intent intent = new Intent(context,PopupWindowMenuActivity.class);
+//        intent.putExtra("param1",data1);
+//        intent.putExtra("param2",data2);
+        context.startActivity(intent);
+    }
+
 
     @Override
     protected int getLayoutId() {
