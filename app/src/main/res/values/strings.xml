@@ -7,4 +7,5 @@
     <string name="text_sweep">扫一扫</string>
     <string name="text_collect">收付款</string>
     <string name="text_help">帮助与反馈</string>
+    <string name="custom_toast">自定义Toast</string>
 </resources>

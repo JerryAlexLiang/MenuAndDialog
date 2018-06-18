@@ -1,11 +1,13 @@
 apply plugin: 'com.android.application'
+//apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.yangliang.menuanddialog"
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -16,11 +18,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    //使用lambda表达式
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    retrolambda {
+        javaVersion JavaVersion.VERSION_1_7
+    }
 }
 
 dependencies {
+    androidTestCompile('com.android.support:support-annotations:26.1.0') {
+        force = true
+    }
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
@@ -28,4 +42,6 @@ dependencies {
     /*配置butterknife*/
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    /*rxbinding*/
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
 }

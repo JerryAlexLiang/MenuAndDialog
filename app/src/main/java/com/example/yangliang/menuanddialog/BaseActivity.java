@@ -39,10 +39,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (getLayoutId() != 0) {
             setContentView(getLayoutId());
         }
-        //初始化控件
-        initView();
         //通过注解绑定控件
         unbinder = ButterKnife.bind(this);
+        //初始化控件
+        initView();
         //初始化数据
         initData();
 

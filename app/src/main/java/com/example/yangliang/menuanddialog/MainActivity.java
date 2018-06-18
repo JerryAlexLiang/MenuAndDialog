@@ -1,16 +1,19 @@
 package com.example.yangliang.menuanddialog;
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
 
     @BindView(R.id.btn_popup_menu)
     Button btnMenu;
+    @BindView(R.id.btn_custom_toast)
+    Button btnCustomToast;
 
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +41,7 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    @OnClick(R.id.btn_popup_menu)
+    @OnClick({R.id.btn_popup_menu, R.id.btn_custom_toast})
     public void onViewClicked(View view) {
 //        Intent intent = new Intent();
         switch (view.getId()) {
@@ -47,7 +50,20 @@ public class MainActivity extends BaseActivity {
                 //启动PopupWindowMenuActivity
                 PopupWindowMenuActivity.actionStart(MainActivity.this);
                 break;
+
+            case R.id.btn_custom_toast:
+                //启动CustomToastActivity
+                CustomToastActivity.actionStart(MainActivity.this);
+                break;
         }
 //        startActivity(intent);
     }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
+
 }
