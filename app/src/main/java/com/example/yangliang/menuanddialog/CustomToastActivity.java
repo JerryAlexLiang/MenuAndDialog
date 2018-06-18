@@ -2,6 +2,7 @@ package com.example.yangliang.menuanddialog;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.Gravity;
 import android.widget.Button;
 
@@ -45,19 +46,13 @@ public class CustomToastActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        /*
-
-        //按钮的点击事件
-        RxView.clicks(hintToast)
-                .throttleFirst(2, TimeUnit.SECONDS)
-                .subscribe(aVoid -> myToast.show());
-         */
         //创建Toast
         customToast = new CustomToast.Builder(this)
                 .setMessage("自定义Toast效果~")//设置提示文字
                 .setBackgroundColor(0xe9ff4587)//设置背景颜色
                 .setGravity(Gravity.CENTER)//设置吐司位置
                 .showIcon(true)//是否显示图标
+                .setTextColor(Color.BLUE)//设置字体的颜色为蓝色
                 .build();//创建吐司
 
         //设置按钮的单击事件并设置按钮的防抖动

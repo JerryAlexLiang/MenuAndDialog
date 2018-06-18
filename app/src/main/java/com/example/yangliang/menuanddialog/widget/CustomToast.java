@@ -2,9 +2,10 @@ package com.example.yangliang.menuanddialog.widget;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Build;
+import android.support.annotation.ColorInt;
 import android.support.annotation.DrawableRes;
-import android.support.annotation.RequiresApi;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,6 +53,7 @@ public class CustomToast {
         private int offsetX = 0;//设置偏移度X
         private int offsetY = 0;//设置偏移度Y
         private boolean isShowIcon;//是否显示图标
+        private int textColor = Color.WHITE;//字体颜色
 
         public Builder(Context context) {
             this.mContext = context;
@@ -127,10 +129,12 @@ public class CustomToast {
         }
 
         /**
-         * 设置是否显示图标
+         * 设置字体的颜色
+         * @param color
+         * @return
          */
-        public Builder setShowIcon(boolean showIcon) {
-            isShowIcon = showIcon;
+        public Builder setTextColor(@ColorInt int color){
+            this.textColor = color;
             return this;
         }
 
@@ -175,7 +179,8 @@ public class CustomToast {
             mine.toast.setView(mine.view);
             //设置偏移量
             mine.toast.setGravity(gravity, offsetX, offsetY);
-
+            //设置字体颜色
+            mine.message.setTextColor(textColor);
             return mine;
         }
     }
