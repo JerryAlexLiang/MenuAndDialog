@@ -43,7 +43,7 @@ public class CustomToast {
 
     public static class Builder {
         private Bitmap icon;//图标图片
-        private int iconID = R.mipmap.ic_launcher;//图标资源ID
+        private int iconID = R.mipmap.ic_launcher_round;//图标资源ID
         private String message;//内容
         private int backgroundColor = 0x56000000;//背景颜色
         private Context mContext;//上下文

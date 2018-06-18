@@ -1,15 +1,19 @@
 package com.example.yangliang.menuanddialog;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+
+import com.example.yangliang.menuanddialog.widget.CustomToast;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -28,11 +32,12 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     /***获取TAG的activity名称**/
     protected final String TAG = this.getClass().getSimpleName();
+    private CustomToast toast;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("BaseActivity", "当前Activity为："+ TAG);
+        Log.d("BaseActivity", "当前Activity为：" + TAG);
         this.mActivity = this;
 
         //设置布局
@@ -64,6 +69,24 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 初始化数据
      */
     protected abstract void initData();
+
+    /**
+     * 初始化封装自定义Toast
+     */
+    public void toastUtil(Bitmap icon, boolean isShowIcon, String message, int backgroundColor,
+                          int textColor, int gravity, int duration) {
+            //创建Toast
+            toast = new CustomToast.Builder(this)
+                    .setMessage(message)//设置提示文字
+                    .showIcon(isShowIcon)//是否显示图标
+                    .setIcon(icon)//图标
+                    .setBackgroundColor(backgroundColor)//设置背景颜色
+                    .setGravity(gravity)//设置吐司位置,Gravity.CENTER
+                    .setTextColor(textColor)//设置字体的颜色
+                    .setDuration(duration)
+                    .build();//创建吐司
+            toast.show();
+    }
 
     public <T extends View> T bindView(int id) {
         return (T) findViewById(id);

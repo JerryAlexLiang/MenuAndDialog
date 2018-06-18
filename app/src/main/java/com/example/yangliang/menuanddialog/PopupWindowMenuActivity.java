@@ -3,6 +3,8 @@ package com.example.yangliang.menuanddialog;
 import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -48,8 +50,8 @@ public class PopupWindowMenuActivity extends BaseActivity implements View.OnClic
      * 启动该活动
      * String data1, String data2
      */
-    public static void actionStart(Context context){
-        Intent intent = new Intent(context,PopupWindowMenuActivity.class);
+    public static void actionStart(Context context) {
+        Intent intent = new Intent(context, PopupWindowMenuActivity.class);
 //        intent.putExtra("param1",data1);
 //        intent.putExtra("param2",data2);
         context.startActivity(intent);
@@ -127,7 +129,7 @@ public class PopupWindowMenuActivity extends BaseActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.menu_one:
                 Toast.makeText(mActivity, "发起群聊", Toast.LENGTH_SHORT).show();
                 if (popupWindow != null && popupWindow.isShowing()) {
@@ -145,7 +147,9 @@ public class PopupWindowMenuActivity extends BaseActivity implements View.OnClic
                 break;
 
             case R.id.menu_three:
-                Toast.makeText(mActivity, "扫一扫", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(mActivity, "扫一扫", Toast.LENGTH_SHORT).show();
+                toastUtil(null, false, "扫一扫   这是我自定义的吐司~",
+                        Color.GRAY, Color.RED, Gravity.BOTTOM, Toast.LENGTH_LONG);
                 if (popupWindow != null && popupWindow.isShowing()) {
                     popupWindow.dismiss();
                     popupWindow = null;
@@ -153,7 +157,10 @@ public class PopupWindowMenuActivity extends BaseActivity implements View.OnClic
                 break;
 
             case R.id.menu_four:
-                Toast.makeText(mActivity, "收付款", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(mActivity, "收付款", Toast.LENGTH_SHORT).show();
+                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.icon_fire_face);
+                toastUtil(bitmap, true, "收付款   这是我自定义的吐司~",
+                        Color.YELLOW, Color.BLUE, Gravity.TOP, Toast.LENGTH_LONG);
                 if (popupWindow != null && popupWindow.isShowing()) {
                     popupWindow.dismiss();
                     popupWindow = null;
@@ -161,7 +168,10 @@ public class PopupWindowMenuActivity extends BaseActivity implements View.OnClic
                 break;
 
             case R.id.menu_five:
-                Toast.makeText(mActivity, "帮助与反馈", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(mActivity, "帮助与反馈", Toast.LENGTH_SHORT).show();
+                Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(), R.drawable.icon_warn);
+                toastUtil(bitmap2, true, "帮助与反馈   这是我自定义的吐司~",
+                        Color.RED, Color.BLACK, Gravity.CENTER, Toast.LENGTH_SHORT);
                 if (popupWindow != null && popupWindow.isShowing()) {
                     popupWindow.dismiss();
                     popupWindow = null;
