@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 //apply plugin: 'com.jakewharton.butterknife'
-apply plugin: 'me.tatarka.retrolambda'
+//apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 27
@@ -23,13 +23,19 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    retrolambda {
-        javaVersion JavaVersion.VERSION_1_7
-    }
+//    retrolambda {
+//        javaVersion JavaVersion.VERSION_1_7
+//    }
 }
 
 dependencies {
-    androidTestCompile('com.android.support:support-annotations:26.1.0') {
+    /*
+    在3.1中所有模块的compile 对应字段都要替换成 implementation，如果不替换掉会在gradle的时候报错，运行不上项目。
+    (强制使用implementation, 不过报错也不够精准。需要你仔细观察gradle的输出)
+    如果你的项目使用多个依赖，而且依赖之间又有相互依赖，你想在主项目里只依赖一个库，那就需要在其他依赖库里使用api引用库，
+    这样所引用的库就可在当前module外使用了
+     */
+    androidTestImplementation('com.android.support:support-annotations:26.1.0') {
         force = true
     }
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -40,8 +46,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     /*配置butterknife*/
-    compile 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     /*rxbinding*/
-    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
 }
