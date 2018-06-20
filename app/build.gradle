@@ -30,7 +30,8 @@ android {
 
 dependencies {
     /*
-    在3.1中所有模块的compile 对应字段都要替换成 implementation，如果不替换掉会在gradle的时候报错，运行不上项目。
+    在3.1中所有模块的compile 对应字段都要替换成 implementation，
+    如果不替换掉会在gradle的时候报错，运行不上项目。
     (强制使用implementation, 不过报错也不够精准。需要你仔细观察gradle的输出)
     如果你的项目使用多个依赖，而且依赖之间又有相互依赖，你想在主项目里只依赖一个库，那就需要在其他依赖库里使用api引用库，
     这样所引用的库就可在当前module外使用了
