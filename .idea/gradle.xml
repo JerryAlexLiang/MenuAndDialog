@@ -9,8 +9,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/QQMenu" />
+            <option value="$PROJECT_DIR$/animDialog" />
             <option value="$PROJECT_DIR$/announcementDrawer" />
-            <option value="$PROJECT_DIR$/announcementDrawer02" />
             <option value="$PROJECT_DIR$/popupWindowAndToast" />
             <option value="$PROJECT_DIR$/satelliteMenu" />
           </set>
