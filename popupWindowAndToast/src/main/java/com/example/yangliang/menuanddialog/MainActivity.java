@@ -1,11 +1,10 @@
 package com.example.yangliang.menuanddialog;
 
-import android.os.Bundle;
+import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
@@ -57,13 +56,6 @@ public class MainActivity extends BaseActivity {
                 break;
         }
 //        startActivity(intent);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
     }
 
 }
