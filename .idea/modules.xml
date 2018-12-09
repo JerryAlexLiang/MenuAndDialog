@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MenuAndDialog.iml" filepath="$PROJECT_DIR$/MenuAndDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QQMenu/QQMenu.iml" filepath="$PROJECT_DIR$/QQMenu/QQMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/announcementDrawer/announcementDrawer.iml" filepath="$PROJECT_DIR$/announcementDrawer/announcementDrawer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/announcementDrawer02/announcementDrawer02.iml" filepath="$PROJECT_DIR$/announcementDrawer02/announcementDrawer02.iml" />
       <module fileurl="file://$PROJECT_DIR$/popupWindowAndToast/popupWindowAndToast.iml" filepath="$PROJECT_DIR$/popupWindowAndToast/popupWindowAndToast.iml" />
       <module fileurl="file://$PROJECT_DIR$/satelliteMenu/satelliteMenu.iml" filepath="$PROJECT_DIR$/satelliteMenu/satelliteMenu.iml" />
     </modules>
