@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/messageNotification02" />
             <option value="$PROJECT_DIR$/popupWindowAndToast" />
             <option value="$PROJECT_DIR$/satelliteMenu" />
+            <option value="$PROJECT_DIR$/satelliteRainbowMenu" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
