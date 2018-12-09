@@ -11,6 +11,9 @@
             <option value="$PROJECT_DIR$/QQMenu" />
             <option value="$PROJECT_DIR$/animDialog" />
             <option value="$PROJECT_DIR$/announcementDrawer" />
+            <option value="$PROJECT_DIR$/iosDialog" />
+            <option value="$PROJECT_DIR$/messageNotification" />
+            <option value="$PROJECT_DIR$/messageNotification02" />
             <option value="$PROJECT_DIR$/popupWindowAndToast" />
             <option value="$PROJECT_DIR$/satelliteMenu" />
           </set>

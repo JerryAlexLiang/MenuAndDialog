@@ -1,1 +1,2 @@
-include ':popupWindowAndToast',':satelliteMenu',':announcementDrawer',":QQMenu" , ":animDialog"
+include ':popupWindowAndToast',':satelliteMenu',':announcementDrawer',":QQMenu" , ":animDialog",
+        ":messageNotification", ":messageNotification02",":iosDialog"
