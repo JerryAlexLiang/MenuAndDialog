@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/QQMenu/QQMenu.iml" filepath="$PROJECT_DIR$/QQMenu/QQMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/animDialog/animDialog.iml" filepath="$PROJECT_DIR$/animDialog/animDialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/announcementDrawer/announcementDrawer.iml" filepath="$PROJECT_DIR$/announcementDrawer/announcementDrawer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/circleMenu/circleMenu.iml" filepath="$PROJECT_DIR$/circleMenu/circleMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/iosDialog/iosDialog.iml" filepath="$PROJECT_DIR$/iosDialog/iosDialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/messageNotification/messageNotification.iml" filepath="$PROJECT_DIR$/messageNotification/messageNotification.iml" />
       <module fileurl="file://$PROJECT_DIR$/messageNotification02/messageNotification02.iml" filepath="$PROJECT_DIR$/messageNotification02/messageNotification02.iml" />
