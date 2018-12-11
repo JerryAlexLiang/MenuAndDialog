@@ -12,6 +12,8 @@
       <module fileurl="file://$PROJECT_DIR$/messageNotification02/messageNotification02.iml" filepath="$PROJECT_DIR$/messageNotification02/messageNotification02.iml" />
       <module fileurl="file://$PROJECT_DIR$/popupWindowAndToast/popupWindowAndToast.iml" filepath="$PROJECT_DIR$/popupWindowAndToast/popupWindowAndToast.iml" />
       <module fileurl="file://$PROJECT_DIR$/satelliteMenu/satelliteMenu.iml" filepath="$PROJECT_DIR$/satelliteMenu/satelliteMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/satelliteRainbowMenu/satelliteRainbowMenu.iml" filepath="$PROJECT_DIR$/satelliteRainbowMenu/satelliteRainbowMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slideDeleteMenu/slideDeleteMenu.iml" filepath="$PROJECT_DIR$/slideDeleteMenu/slideDeleteMenu.iml" />
     </modules>
   </component>
 </project>

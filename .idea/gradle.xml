@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/popupWindowAndToast" />
             <option value="$PROJECT_DIR$/satelliteMenu" />
             <option value="$PROJECT_DIR$/satelliteRainbowMenu" />
+            <option value="$PROJECT_DIR$/slideDeleteMenu" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
