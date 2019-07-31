@@ -1,8 +1,14 @@
 package com.example.yangliang.menuanddialog;
 
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.yangliang.menuanddialog.utils.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -58,4 +64,25 @@ public class MainActivity extends BaseActivity {
 //        startActivity(intent);
     }
 
+    private long waitTime = 2000;
+    private long touchTime = 0;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN && KeyEvent.KEYCODE_BACK == keyCode) {
+            long currentTime = System.currentTimeMillis();
+            if ((currentTime - touchTime) >= waitTime) {
+//                Toast.makeText(MainHomeActivity.this, "再按一次退出应用", Toast.LENGTH_SHORT).show();
+                ToastUtil.setCustomToast(MainActivity.this, BitmapFactory.decodeResource(getResources(), R.mipmap.icon_true),
+                        true, "再按一次退出应用", Color.RED, Color.WHITE, Gravity.CENTER, Toast.LENGTH_SHORT);
+                touchTime = currentTime;
+            } else {
+                finish();
+            }
+            return true;
+        } else if (KeyEvent.KEYCODE_HOME == keyCode) {
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/MenuAndDialog.iml" filepath="$PROJECT_DIR$/.idea/MenuAndDialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/MenuAndDialog.iml" filepath="$PROJECT_DIR$/MenuAndDialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/QQMenu/QQMenu.iml" filepath="$PROJECT_DIR$/QQMenu/QQMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/animDialog/animDialog.iml" filepath="$PROJECT_DIR$/animDialog/animDialog.iml" />

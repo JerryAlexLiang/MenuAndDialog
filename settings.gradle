@@ -1,3 +1,12 @@
-include ':popupWindowAndToast', ':satelliteMenu', ':announcementDrawer', ":QQMenu", ":animDialog",
-        ":messageNotification", ":messageNotification02", ":iosDialog", ":circleMenu",":satelliteRainbowMenu",
-        ":slideDeleteMenu"
+include ':popupWindowAndToast'
+//,
+//        ':satelliteMenu',
+//        ':announcementDrawer',
+//        ":QQMenu",
+//        ":animDialog",
+//        ":messageNotification",
+//        ":messageNotification02",
+//        ":iosDialog",
+//        ":circleMenu",
+//        ":satelliteRainbowMenu",
+//        ":slideDeleteMenu"
